@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import styles from "./App.module.css";
 import { data } from "./Data";
+import Bounce from "react-reveal/Bounce"
+
 const App = () => {
   //converting data object into array
   const emojiArr = Object.keys(data);
@@ -38,11 +40,15 @@ const App = () => {
 
   return (
     <div className={styles.parent}>
-    <div >
+    <Bounce
+    left>
+  <div >
     <h1 className={styles.text}>Emoji</h1>
     <h2 className={styles.text}>Interpreter</h2>
 
     </div>
+  
+    
   
       <div className={styles.container}>
         <input
@@ -79,6 +85,7 @@ const App = () => {
           })}
         </div>
       </div>
+      </Bounce>
     </div>
   );
 };
